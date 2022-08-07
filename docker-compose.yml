@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mini-server1:
+      build: ./server
+      volumes: 
+        - ./server:/var/www/html
+  mini-server2:
+      build: ./server
+      volumes: 
+        - ./server:/var/www/html
+  mini-server3:
+      build: ./server
+      volumes: 
+        - ./server:/var/www/html
+  loadb:
+    build: ./loadb
+    ports: 
+      - 9090:9090
+
+
+
+
